@@ -21,9 +21,7 @@
         width: 50px;
     }
 
-    .sidebar{
-        background-color: lightgray;
-    }
+
 
     .col-centered{
         display: flex;
@@ -69,12 +67,13 @@
 
     .task-list{
         display: flex;
-        align-items:center;
-        justify-content:space-evenly;
+        align-items:flex-start;
+        justify-content:space-between;
         flex-direction: column;
         margin: 25px;
-        padding: 15px;
-        width: 90%;
+        padding-top: 15px;
+        
+        width: 80%;
         height: 100%;
     }
 
@@ -86,7 +85,7 @@
 
         justify-content: center!important;}}
 
-    .modal {
+    /*.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -104,7 +103,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    }
+    }*/
 
     .completed-tasks-list {
         display: flex;
@@ -188,4 +187,12 @@ h1{
 
 p{
     margin-top: 15px;
+}
+
+.OverdueModal{
+    /*display: none;*/
+    
+    position:fixed;
+    margin: auto;
+    background-color: #212529;
 }
