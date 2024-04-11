@@ -1,19 +1,24 @@
 /*Universal Styling*/
     header{
-        background-color: #212529;
+        background-color: #0B7A75;
         padding-bottom: 0;
         margin-bottom: 0;
     }
 
     body{
-        background-color: lightgray;
+        background-color: #CDCDCD;
         font-size: 1.2rem;
     }
     header{
         align-items: center;
     }
 
+    .p-3{
+        padding: 0 !important;
+    }
+
 /*index page*/
+
     .col-md-1 img{
         display: flex;
         flex-direction: row;
@@ -35,6 +40,12 @@
     .TaskBtn{
         background: none;
         background-color: none;
+    }
+
+    .TaskBtn :hover, 
+    .ShowDoneBtn :hover,
+    .sidebar :hover{
+        background-color: #CDCDCD;
     }
 
     .TaskModal{
@@ -59,6 +70,22 @@
         margin: auto;
     }
 
+    #task, #duedate, .add-task{
+        background-color: #DFF8EB;
+        color: black;
+    }
+
+    #priority, #desc{
+        background-color: #CDCDCD;
+    }
+
+    .add-task:hover{
+        background-color: #0B7A75;
+    }
+
+    ::placeholder{
+        color: black;
+    }
 
     .task {
         border-radius: 25px;
@@ -106,10 +133,9 @@
     .edit-task:hover,
     .mark-done:hover,
     .delete-task:hover{
-        background-color: #0056b3 !important;
+        background-color: #0B7A75 !important;
         color: white !important;
     }
-
 
     .completed-tasks-modal{
         display: none;
@@ -117,7 +143,6 @@
     }
     @media (min-width: 992px){
     .justify-content-lg-start {
-
         justify-content: center!important;}}
 
     .completed-tasks-list {
@@ -137,6 +162,28 @@
         border: 1px solid #ddd; 
     }
 
+    .modal-header{
+        background-color: #0B7A75;
+        color: white;
+
+    }
+
+    .modal-body{
+        background-color: #CDCDCD;
+        padding: 0 !important;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+    }
+
+    .delete{
+        background-color: #DFF8EB;
+    }
+
+    .modal-content{
+        background-color: transparent !important;
+    }
+
     .close {
     color: #aaa;
     float: right;
@@ -150,7 +197,88 @@
     text-decoration: none;
     cursor: pointer;
     }
-    
+
+    h1{
+        color:white;
+    }
+
+    p{
+        margin-top: 15px;
+    }
+
+    .OverdueModal{
+        position:fixed;
+        margin: auto;
+        background-color: #212529;
+    }
+    .overdue{
+        color: red;
+        border-radius: 2px;
+        border-style: solid;
+        border-color: red;
+    }
+
+    .OverdueHeading{
+        display: none;
+        color: red;
+    }
+
+    .task + .overdue{
+        border-radius: 15px;
+        border-style: solid;
+        border-color: red;
+    }
+    .row{
+        margin: auto;
+        padding-left: 5px;
+    }
+
+    #AddTaskModal input[type="text"],
+    #AddTaskModal select,
+    #AddTaskModal button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+
+
+    #AddTaskModal input[type="date"] {
+        width: calc(100% - 10px); 
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .draggable{
+        opacity: .5;
+    }
+
+    a{
+    color: white;
+    }
+
+    @media (max-width:430px){
+        .task-list{
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 1em;
+        padding-bottom: 15px;
+        }
+
+        .TaskForm{
+            display: block;
+        }
+    }
+
+    @media (max-width:900px){
+        
+    }
+
 /*Login-Sign up page*/
 
 .Sign-InContainer .btn,
@@ -194,67 +322,11 @@ margin-top: 25px;
     border-radius: 15px;
 }
 
-h1{
-    color:white;
+.btn{
+    background-color: #DFF8EB;
 }
 
-p{
-    margin-top: 15px;
+.btn:hover{
+    background-color: #0B7A75;
 }
 
-.OverdueModal{
-    position:fixed;
-    margin: auto;
-    background-color: #212529;
-}
-.overdue{
-    color: red;
-    border-radius: 2px;
-    border-style: solid;
-    border-color: red;
-}
-
-.OverdueHeading{
-    display: none;
-    color: red;
-}
-
-.task .overdue{
-    border-radius: 15px;
-    border-style: solid;
-    border-color: red;
-}
-.row{
-    margin: auto;
-    padding-left: 5px;
-}
-
-#AddTaskModal input[type="text"],
-#AddTaskModal select,
-#AddTaskModal button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-#AddTaskModal button {
-    background-color: white;
-    color: #212529;
-    border: none;
-    cursor: pointer;
-}
-
-#AddTaskModal button:hover {
-    background-color: #0056b3;
-}
-#AddTaskModal input[type="date"] {
-    width: calc(100% - 10px); 
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.draggable{
-    opacity: .5;
-}
