@@ -6,10 +6,10 @@ console.log("JavaScript loaded");
 
         console.log("Swutching modals. ShowSignIn:", showSignIn);
         
-        if (showSignIn) {
+        if (showSignIn == true) {
             signInContainer.style.display = 'block';
             registerContainer.style.display = 'none';
-        } else {
+        } if(showSignIn == false) {
             signInContainer.style.display = 'none';
             registerContainer.style.display = 'block';
         }

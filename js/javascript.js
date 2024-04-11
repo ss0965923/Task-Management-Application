@@ -137,6 +137,9 @@ taskList.addEventListener("click", (event) => {
 
     taskModal.style.display = "inline-block";
 
+    //Show the edit task popup
+    $('#editTaskModal').modal('show');
+
     const task = savedTasks[taskIndex];
 
     // Updating task inputs with selected task details
@@ -205,8 +208,6 @@ function addCompletedTask(task) {
   }
 }
 
-
-
 // Event listener for showing completed tasks modal
 showDoneButton.onclick = function () {
   $('#completed-tasks-modal').modal('show');
@@ -271,3 +272,4 @@ taskList.addEventListener('click', function(event) {
       }
   }
 });
+

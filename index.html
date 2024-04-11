@@ -40,8 +40,9 @@
 
 
   <!--Navigation Menu-->
-    <div class="row">
-      <div class="sidebar col-12 col-lg-1 col-centered">
+    <div class="container-fluid">
+      <div class="row">
+      <div class="sidebar col-md-1 col-centered">
         <div class="side-navbar active-nav d-flex flex-wrap justify-content-center justify-content-lg-start">
           <ul class="list-unstyled mb-0 d-flex flex-row flex-lg-column">
             <li><button><img class="sidebar" src="img/sidebar-icon-17.jpg" alt="Sidebar"></button></li>
@@ -55,7 +56,8 @@
       </div>
 
     <!--Task Manager-->
-    <div id="AddTaskModal" class="TaskModal col-12 col-lg-11">
+    <div class="col-md-11">
+      <div id="AddTaskModal" class="TaskModal">
       <div class="TaskForm">
         <input type="text" id="task" placeholder="Enter task... ">
         <select name="taskPriority" id="priority">
@@ -69,11 +71,13 @@
         <button id="add-task">Add Task</button>
       </div>
     </div>
+    
 
     <!--task list-->
-    <div class="task-list col-12 col-lg-10" id="task-list" ></div>
+    <div class="task-list" id="task-list"></div>
   </div>
-
+  </div>
+</div>
 
     <!--Overdue Task Modal Bootsrap-->
     <div class="modal fade" id="overdueModal" tabindex="-1" role="dialog" aria-labelledby="overdueModalLabel"
@@ -88,6 +92,24 @@
           </div>
           <div class="modal-body">
             <p>There are one or more overdue tasks that need attention!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Edit Task Alert-->
+    <div class="modal fade" id="editTaskModal" tabindex="-1" role="dialog" aria-labelledby="editTaskModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editTaskModalLabel">Edit Task Alert</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hiden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Task has been moved to the add task box.</p>
           </div>
         </div>
       </div>
@@ -109,6 +131,7 @@
     </div>
   </div>
 </div>
+
 
   <footer class="col-12 bg-dark" style="width: 100%; height: 100px;"></footer>
 
